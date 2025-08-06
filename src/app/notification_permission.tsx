@@ -10,7 +10,7 @@ export const NotificationPermission = () => {
   return (
     <button
       onClick={async () => {
-        if (!("Notification" in globalThis)) {
+        if (!("Notification" in window)) {
           alert("Notification API is not supported in this browser");
           return;
         }
